@@ -1,0 +1,25 @@
+﻿<Window x:Class="Billing_Components.Bill_Payment"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Bill_Payment" Height="300" Width="464" WindowStyle="ToolWindow">
+    <Grid>
+        <ListBox HorizontalContentAlignment="Stretch" ItemsSource="{Binding MemberPayment}" Margin="0,0,0,47">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid Height="35">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="1*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="{Binding Path=Name}" HorizontalAlignment="Left"/>
+                        <TextBox Grid.Column="1" Text="{Binding Path=PaymentAmount, Mode=TwoWay}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                    </Grid>
+
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Button Content="Pay bill" Height="32" VerticalAlignment="Bottom" Margin="334,0,10,10" Click="Button_Click_2"  Style="{StaticResource ResourceKey=BTNGreen}"/>
+        <Button Content="Cancel" Height="32" VerticalAlignment="Bottom" Margin="217,0,127,10" Click="Button_Click_1"  Style="{StaticResource ResourceKey=BTNRed}"/>
+        <Button Content="Split evenly" Height="32" VerticalAlignment="Bottom" Margin="10,0,334,10" Click="Button_Click"  Style="{StaticResource ResourceKey=BTNBlue}" />
+    </Grid>
+</Window>

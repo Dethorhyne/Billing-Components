@@ -1,0 +1,58 @@
+﻿<Window x:Class="Billing_Components.Bill_Creation"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="New Bill" Height="457" Width="638" ResizeMode="NoResize">
+    <Grid Margin="0,0,0,0">
+        <Label Content="Payer" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <TextBox Margin="10,41,0,0" Text="{Binding Path=Payer, Mode=TwoWay}" HorizontalAlignment="Left" Width="222" Height="30" VerticalAlignment="Top" />
+
+        <Label Content="Recipient" HorizontalAlignment="Left" Margin="10,76,0,0" VerticalAlignment="Top"/>
+        <TextBox TextWrapping="Wrap" AcceptsReturn="True" Margin="10,107,0,0" Text="{Binding Path=Recipient, Mode=TwoWay}" Height="96" VerticalAlignment="Top" HorizontalAlignment="Left" Width="222" />
+
+        <Label Content="Category" HorizontalAlignment="Left" Margin="237,10,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="PayerTest" Margin="237,41,0,0" Text="{Binding Path=Category, Mode=TwoWay}" HorizontalAlignment="Left" Width="131" Height="30" VerticalAlignment="Top" />
+
+        <Label Content="Currency" HorizontalAlignment="Left" Margin="373,10,0,0" VerticalAlignment="Top"/>
+        <TextBox Margin="373,41,0,0" Text="{Binding Path=Currency, Mode=TwoWay}" HorizontalAlignment="Left" Width="81" Height="30" VerticalAlignment="Top" />
+
+        <Label Content="Amount" HorizontalAlignment="Left" Margin="459,10,0,0" VerticalAlignment="Top"/>
+        <TextBox Margin="459,41,0,0" Text="{Binding Path=Amount, Mode=TwoWay}" HorizontalAlignment="Left" Width="158" Height="30" VerticalAlignment="Top" />
+
+        <Label Content="Recipient IBAN" HorizontalAlignment="Left" Margin="237,76,0,0" VerticalAlignment="Top"/>
+        <TextBox Margin="237,107,0,0" Text="{Binding Path=IBANOfRecipient, Mode=TwoWay}" HorizontalAlignment="Left" Width="380" Height="30" VerticalAlignment="Top" />
+
+        <Label Content="Model" HorizontalAlignment="Left" Margin="237,142,0,0" VerticalAlignment="Top"/>
+        <TextBox Margin="237,173,0,0" Text="{Binding Path=Model, Mode=TwoWay}" HorizontalAlignment="Left" Width="97" Height="30" VerticalAlignment="Top" />
+
+        <Label Content="Reference number" HorizontalAlignment="Left" Margin="339,142,0,0" VerticalAlignment="Top"/>
+        <TextBox Margin="339,173,0,0" Text="{Binding Path=ReferenceNumber, Mode=TwoWay}" HorizontalAlignment="Left" Width="278" Height="30" VerticalAlignment="Top" />
+
+        <Label Content="Description" HorizontalAlignment="Left" Margin="10,208,0,0" VerticalAlignment="Top"/>
+        <TextBox TextWrapping="Wrap" AcceptsReturn="True" Margin="17,239,0,0" Text="{Binding Path=Description, Mode=TwoWay}" HorizontalAlignment="Left" Width="215" Height="133" VerticalAlignment="Top" />
+
+
+        <Label Content="Due Date" HorizontalAlignment="Left" Margin="237,208,0,0" VerticalAlignment="Top"/>
+        <Label Content="Day" HorizontalAlignment="Left" Margin="237,239,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="TXT_DueDate_Day" Text="{Binding Path=DueDateDay, Mode=TwoWay}" HorizontalAlignment="Left" Margin="237,270,0,0" VerticalAlignment="Top" Width="52" Height="30"/>
+        <Label Content="Month" HorizontalAlignment="Left" Margin="294,239,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="TXT_DueDate_Month" Text="{Binding Path=DueDateMonth, Mode=TwoWay}" HorizontalAlignment="Left" Margin="294,270,0,0" VerticalAlignment="Top" Width="52" Height="30"/>
+        <Label Content="Year" HorizontalAlignment="Left" Margin="351,239,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="TXT_DueDate_Year" Text="{Binding Path=DueDateYear, Mode=TwoWay}" HorizontalAlignment="Left" Margin="351,270,0,0" VerticalAlignment="Top" Width="65" Height="30"/>
+
+
+        <Label Content="For month" HorizontalAlignment="Left" Margin="441,208,0,0" VerticalAlignment="Top"/>
+        <Label Content="Month" HorizontalAlignment="Left" Margin="441,239,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="TXT_ForMonth_Month" Text="{Binding Path=ForMonthMonth, Mode=TwoWay}" HorizontalAlignment="Left" Margin="441,270,0,0" VerticalAlignment="Top" Width="52" Height="30"/>
+        <Label Content="Year" HorizontalAlignment="Left" Margin="498,239,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="TXT_ForMonth_Year" Text="{Binding Path=ForMonthYear, Mode=TwoWay}" HorizontalAlignment="Left" Margin="498,270,0,0" VerticalAlignment="Top" Width="65" Height="30"/>
+
+        <Button Content="Import" Margin="17,0,473,10" Height="32" VerticalAlignment="Bottom" Click="Import_Bill"  Style="{StaticResource ResourceKey=BTNBlue}"/>
+
+
+        <Button Content="Create new bill" Margin="480,0,10,10" Height="32" VerticalAlignment="Bottom" Click="Button_Click" Style="{StaticResource ResourceKey=BTNGreen}"/>
+        <Button Content="Cancel" Margin="338,0,152,10" Height="32" VerticalAlignment="Bottom" Click="Button_Click_1" Style="{StaticResource ResourceKey=BTNRed}"/>
+
+
+
+    </Grid>
+</Window>
